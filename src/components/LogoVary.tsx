@@ -6,12 +6,10 @@ interface Props {
 }
 
 function LogoVary({ text, color }: Props) {
-  console.log(`text-[${color}]`);
-
   return (
     <div className="flex items-center gap-1">
-      <PiChartPieSliceDuotone color={color} size="45px" />
-      <span className={`font-[700] text-[30px] text-[${color}] `}>{text}</span>
+      <PiChartPieSliceDuotone className="rotate rotate-90" color={color} size="45px" />
+      <span className={`font-[700] text-[30px] text-[#fff] `}>{text}</span>
     </div>
   );
 }

@@ -7,9 +7,9 @@ interface Props {
 
 function AdvertCard({ image1, image2 }: Props) {
   return (
-    <div className="flex relative justify-between w-full" >
+    <div className=" flex relative justify-between w-full" >
       <div>{image1}</div>
-      <div className="absolute left-[20%] bottom-[-15%] text-right " >{image2}</div>
+      <div className="absolute left-[20%] bottom-[-15%] text-right drop-shadow-lg " >{image2}</div>
     </div>
   );
 }

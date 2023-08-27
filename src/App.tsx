@@ -14,6 +14,16 @@ import AdvertCard from "./components/AdvertCard";
 import advertCard from "./images/advertCard.svg";
 import advertImage from "./images/advertImage.svg";
 import check from "./images/check.svg";
+import femaleAd from "./images/femaleAd.png";
+import rightArrow from "./images/arrowright.png";
+import TestimonialCard from "./components/TestimonialCard";
+import testimonialLeft from "./images/testimonialLeft.svg";
+import testimonialRight from "./images/testimonialRight.svg";
+import testimonialMiddle from "./images/testimonialMiddle.svg";
+import connectImage from "./images/connectImage.png";
+import { FiChevronDown } from "react-icons/fi";
+import PropositionCard from "./components/PropositionCard";
+import propositionImg from "./images/propsitionImg.png";
 
 function App() {
   return (
@@ -86,6 +96,7 @@ function App() {
           <LogoVary text="Presto" color="#ADB6Bf" />
           <VaryLogo color={"#FFFFFF"} />
           <LogoVary text="Presto" color="#ADB6Bf" />
+          <VaryLogo color={"#223B52"} />
         </div>
       </div>
 
@@ -224,18 +235,203 @@ function App() {
             />
           </div>
         </div>
-        <div className="w-[100%] flex just justify-end ">
+        <div className="w-[100%] mb-[300px] flex just justify-end ">
           <AdvertCard
-            image1={<img className="w-[495px]" src={advertImage} />}
+            image1={<img className="w-[495px]" src={femaleAd} />}
             image2={
               <div className="bg-[#ffffff] rounded-[10px] p-5">
-                <img src={advertCard} alt="" />
-                <h1 className="text-[#0A2640] font-[700] my-1">30%</h1>
-                <p className="text-[12px]">More income in June</p>
+                <img src={pie} className="mx-auto" alt="" />
+                <p className="text-[12px] mt-2 flex items-center gap-3">
+                  <span className="bg-[#0DBBFC] w-[10px] h-[10px] rounded-[50%]"></span>
+                  <span>35% - Agile Development</span>
+                </p>
+                <p className="text-[12px] mt-2 flex items-center gap-3">
+                  <span className="bg-[#69E6A6] w-[10px] h-[10px] rounded-[50%]"></span>
+                  <span>30% - Investor bandwidth</span>
+                </p>
+                <p className="text-[12px] mt-2 flex items-center gap-3">
+                  <span className="bg-[#C4C4C4] w-[10px] h-[10px] rounded-[50%]"></span>
+                  <span>35% - A/B testing </span>
+                </p>
               </div>
             }
           />
         </div>
+      </div>
+
+      {/* Testimonials */}
+      <div className="h-[800px] text-[#ffffff] pt-[50px] bg-[#0A2640]">
+        <div className=" w-[80%] mx-auto  flex justify-between items-end ">
+          <div className="text-[48px]">
+            An enterprise template to ramp <br /> up your company website
+          </div>
+          <div className="flex items-center gap-2">
+            {" "}
+            <img
+              className="bg-white rounded-[50%] p-1  rotate-[-180deg]"
+              src={rightArrow}
+              alt=""
+            />{" "}
+            <img
+              className="bg-white rounded-[50%] p-1 "
+              src={rightArrow}
+              alt=""
+            />{" "}
+          </div>
+        </div>
+        <div className="w-[80%] mx-auto mt-[50px] flex justify-between ">
+          <TestimonialCard
+            height={false}
+            text="“Buyer buzz partner network disruptive non-disclosure agreement business”"
+            email="Manager @ Howarts"
+            name="Albus Dumbledore"
+            image={<img src={testimonialLeft}></img>}
+          />
+
+          <TestimonialCard
+            height={true}
+            text="“Learning curve infrastructure value proposition advisor strategy user experience hypotheses investor.”"
+            email="Manager @ Slytherin"
+            name="Severus Snape"
+            image={<img src={testimonialMiddle}></img>}
+          />
+
+          <TestimonialCard
+            height={false}
+            text="“Release facebook responsive web design business model canvas seed money monetization.”"
+            email="Team Leader @ Gryffindor"
+            name="Harry Potter"
+            image={<img src={testimonialRight}></img>}
+          />
+        </div>
+      </div>
+
+      {/* Connect */}
+      <img
+        src={connectImage}
+        className="w-[80%] mx-auto mt-[80px] mb-[30px] "
+        alt=""
+      />
+
+      <div className="flex justify-between mb-[50px] w-[80%] mx-auto">
+        <div className="w-[50%] text-[25px] font-[400]">
+          We connect our customers <br /> with the best, and help them <br />{" "}
+          keep up-and stay open.
+        </div>
+        <div className="flex flex-col gap-6 w-[50%]">
+          <div className="flex justify-between items-center ">
+            <span>We connect our customers with the best?</span>
+            <FiChevronDown
+              color="#ffffff"
+              style={{
+                backgroundColor: "#0A2640",
+                borderRadius: "50%",
+                height: "20px",
+                width: "20px",
+              }}
+            />
+          </div>
+          <div className="flex justify-between items-center ">
+            <span>We connect our customers with the best?</span>
+            <FiChevronDown
+              color="#ffffff"
+              style={{
+                backgroundColor: "#0A2640",
+                borderRadius: "50%",
+                height: "20px",
+                width: "20px",
+              }}
+            />
+          </div>
+        </div>
+      </div>
+      {/* BLOG */}
+      <div className="w-[60%] mx-auto">
+        <p className="text-center text-[#777777]">Our Blog</p>
+        <div className="text-center text-[35px] w-[100%]">
+          Value proposition accelerator <br /> product management venture
+        </div>
+      </div>
+      <div className="w-[65%] mx-auto mt-[20px] flex justify-between">
+        <PropositionCard
+          text="Pitch termsheet backing validation focus release."
+          name="Harry Potter"
+          image={<img src={propositionImg}></img>}
+          smallImage={<img className="w-[25px]" src={testimonialRight}></img>}
+        />
+        <PropositionCard
+          text="Pitch termsheet backing validation focus release."
+          name="Harry Potter"
+          image={<img style={{ height: "160px" }} src={femaleAd}></img>}
+          smallImage={<img className="w-[25px]" src={testimonialRight}></img>}
+        />
+        <PropositionCard
+          text="Pitch termsheet backing validation focus release."
+          name="Harry Potter"
+          image={<img src={propositionImg}></img>}
+          smallImage={<img className="w-[25px]" src={testimonialRight}></img>}
+        />
+      </div>
+      <div className="my-[150px] w-[40%] mx-auto flex justify-center items-center">
+        <Button
+          title="Load more"
+          className="border border-[#0A2640] px-7 py-2 rounded-[18px] text-[#0A2640] font-[700] text-[14px] "
+        />
+      </div>
+      {/* Enterprise Template */}
+      <div className="w-[80%] my-[50px] py-[20px] bg-[#0A2640] mx-auto  flex flex-col justify-center items-center">
+        <p className="text-[35px] text-[#fff] mt-[30px]">
+          An enterprise template to ramp <br /> up your company website
+        </p>
+        <div className="w-[100%] mx-auto py-[20px] flex justify-center gap-[20px]">
+          <Button
+            className="border-2 border-[#fff] rounded-[20px] w-[250px] text-left  pl-7 pr-[20px] py-2 leading-[28px] font-sans  text-[#000000] bg-white text-[14px] "
+            title="Your email address"
+          />
+          <Button
+            className="bg-[#69E6A6] border-2 border-[#69E6A6] rounded-[20px] px-10 py-2 leading-[28px] font-sans font-[700] text-[14px] "
+            title="Start now"
+          />
+        </div>
+      </div>
+
+      <div className="w-[80%] mx-auto gap-3 mt-[80px]   h-[170px] flex justify-between ">
+        <div className="w-[40%] flex flex-col gap-8">
+          <div className="ml-[-22px]">
+            <VaryLogo height="30" color={"#223B52"} />
+          </div>
+          <p className="text-[#777777]">
+            Social media validation business model <br /> canvas graphical user
+            interface launch <br /> party creative facebook iPad twitter.
+          </p>
+        </div>
+        <div className="w-[30%]  flex flex-col gap-6 ">
+          <h2 className="font-[700] font-sans">Landings</h2>
+          <span className="text-[#777777]">Home</span>
+          <span className="text-[#777777]">Products</span>
+          <span className="text-[#777777]">Services</span>
+        </div>
+        <div className="w-[30%]  flex flex-col gap-6 ">
+          <h2 className="font-[700] font-sans">Company</h2>
+          <span className="text-[#777777]">Home</span>
+          <span className="text-[#777777]">
+            Careers{" "}
+            <Button
+              className="bg-[#69E6A6] w-[70px] border-2 border-[#69E6A6] rounded-[20px]  font-sans font-[700] text-[#0A2640] text-[12px] "
+              title="Hiring"
+            />
+          </span>
+          <span className="text-[#777777]">Services</span>
+        </div>
+        <div className="w-[30%]  flex flex-col gap-6 ">
+          <h2 className="font-[700] font-sans">Resources</h2>
+          <span className="text-[#777777]">Blog</span>
+          <span className="text-[#777777]">Products</span>
+          <span className="text-[#777777]">Services</span>
+        </div>
+      </div>
+      <div className="w-[80%] mx-auto mb-[100px] text-[#777777] ">
+        All rights reserved.
       </div>
     </div>
   );

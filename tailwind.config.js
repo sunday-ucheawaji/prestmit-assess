@@ -6,6 +6,13 @@ module.exports = {
       fontFamily: {
         manrope: ["Manrope", "sans-serif"],
       },
+      rotate: {
+        45: "45deg",
+        90: "90deg",
+        "-45": "-45deg",
+        "-90": "-90deg",
+        // Add other rotations if needed
+      },
     },
   },
   plugins: [
