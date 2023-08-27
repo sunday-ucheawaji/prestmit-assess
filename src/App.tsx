@@ -27,8 +27,8 @@ import propositionImg from "./images/propsitionImg.png";
 
 function App() {
   return (
-    <div className="w-full ">
-      <div className="font-manrope  pt-[56px] px-[100px] w-full bg-[#0A2640]  ">
+    <div className="w-full h-[100vh] relative pb-[100px] overflow-auto custom-scrollbar">
+      <div className="font-manrope pt-[56px] px-[100px] w-full bg-[#0A2640]  ">
         <div className="bg-[#1C3D5B] arc-background"></div>
         <div className="w-full h-[42px] relative flex justify-between items-center">
           <img src={logo} alt="logo" />
@@ -430,7 +430,7 @@ function App() {
           <span className="text-[#777777]">Services</span>
         </div>
       </div>
-      <div className="w-[80%] mx-auto mb-[100px] text-[#777777] ">
+      <div className="w-[80%] mx-auto  text-[#777777] ">
         All rights reserved.
       </div>
     </div>
